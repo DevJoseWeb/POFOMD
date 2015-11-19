@@ -30,14 +30,14 @@ The root page (/)
 
 sub base : Chained('/') PathPart('') CaptureArgs(0) { }
 sub faq : Chained('base') Args(0) { }
-sub sobre : Chained('base') Args(0) { } 
+sub sobre : Chained('base') Args(0) { }
 sub contato : Chained('base') Args(0) { }
 sub todo : Chained('base') Args(0) { }
 sub comofunciona : Chained('base') Args(0) { }
 
-sub root : Chained('base') PathPart('') Args(0) { 
+sub root : Chained('base') PathPart('') Args(0) {
     my ($self, $c) = @_;
-    $c->res->redirect('/dataset/estado-sao-paulo-2012');
+    $c->res->redirect('/dataset/federal-direto-2015');
 }
 
 =head2 default
