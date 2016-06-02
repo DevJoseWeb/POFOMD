@@ -33,7 +33,7 @@ margin: -20px -20px 20px;
 
 .footer {
 	background-color: #222;
-	color: white;
+	color: #999;
 
 	-webkit-box-shadow: inset 0 5px 15px rgba(255,255,255,.25);
 	-moz-box-shadow: inset 0 5px 15px rgba(255,255,255,.25);
@@ -54,17 +54,19 @@ margin: -20px -20px 20px;
 }
 
 .malha {
-	background: transparent url(/static/images/grid-18px.png) top center;
+	background: #eee;
 	padding: 20px 0;
+	font-size: 11px;
 }
 
 .footer h4 {
 	color: #EEE;
 }
 .footer a {
-	color: #F89406;
+	color: #509f83;
 
 }
+footer ul{ list-style: none;}
 
 .navbar h3 a, .navbar .brand {
     background: url("/static/images/opendatabr.20.png") no-repeat scroll 0 8px transparent;
@@ -72,7 +74,7 @@ margin: -20px -20px 20px;
 }
 
 .navbar form {
-    margin: 2px 0;
+    margin: 12px 0;
 }
 
 .paginator ul {
@@ -121,3 +123,54 @@ font-weight: bold;
 #chart1-description {
     height: 396px;
 }
+.colheader-logo-wrap{
+	width: 122px;
+	float: left;
+	padding: 4px 20px 0 0;
+}
+.folow-ga{
+	background-image: url(http://gastosabertos.org/wp-content/themes/gastos-abertos/img/city_bg.jpg);
+	color: #FFFFFF;
+	background-size: 100% auto;
+	position: relative;
+	text-align: center;
+	background-position: 0 25%;
+	background-repeat: no-repeat;
+}
+.folow-ga img{
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	margin: 5% 0px;
+}
+.ok-footer-link{
+	display: inline-block;
+	width: 250px;
+}
+.liks-footer-pequenos{
+	padding: 0 0 10px;
+	font-size: 11px;
+}
+.liks-footer-pequenos img{
+	max-height: 34px;
+}
+.mini-menu-footer a{font-size: 14px}
+.text-left-f-wrap{text-align: left; display: inline-block}
+.text-left-f-wrap ul{margin-left: 0}
+/*  =========================================================================================
+	Estilos Responsivos
+    =========================================================================================  */
+    
+    @media(max-width:767px) {
+	    .mini-menu-footer, .logo-ok-footer{
+		    padding: 20px 0
+	    }
+	    .text-left-f-wrap{
+		    width: 250px
+	    }
+	    
+	    .liks-footer-pequenos img{
+		    margin: 10px 0;
+	    }
+    } 
+/*.ok-footer-link img{width: 100%; height: auto}*/
