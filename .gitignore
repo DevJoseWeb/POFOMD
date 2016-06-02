@@ -21,3 +21,4 @@ Session.vim
 *.csv
 *.xml
 pofomd_local.*
+.ftpconfig
