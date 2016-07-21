@@ -110,9 +110,12 @@ _gaq.push(['_trackPageview']);
                     <li><a href="/sobre">Sobre</a></li>
                     <li><a href="/datasets/overview">Datasets</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Federal <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Municipial<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/dataset/federal-direto-2015">Gastos diretos - 2015 Oct</a></li>
+
+				 		<li><a href="/dataset/sp-sao-paulo-2016">São Paulo - 2016</a></li>
+			    			<li><a href="/dataset/sp-sao-paulo-2015">São Paulo - 2015</a></li>
+			    			<li><a href="/dataset/sp-sao-paulo-2014">São Paulo - 2014</a></li>
                         </ul>
                     </li>
                     <!--
@@ -158,13 +161,6 @@ _gaq.push(['_trackPageview']);
 					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.paraondefoiomeudinheiro.org.br&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" style="border:none; overflow:hidden; width:150px; height:21px;"></iframe>
 <!--<![endif]-->
 					<div class="banner-orcamento"><a href="/comofunciona"><img src="/static/images/banner-orcamento.png" border="0"></a></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="span12">
-					<div class="alert alert-warning text-center" style="font-size: 2em; padding: 1em">Os dados abaixo estão em construição! 
-						
-					</div>
 				</div>
 			</div>
 		</div>
