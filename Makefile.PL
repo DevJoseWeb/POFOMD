@@ -41,6 +41,11 @@ requires 'Catalyst::Model::DBIC::Schema';
 requires 'DBIx::Class::ResultClass::HashRefInflator';
 requires 'DBD::Pg';
 requires 'Redis';
+requires 'DBIx::Class::Schema DBD::Pg';
+requires 'Text::Unaccent';
+requires 'Text::CSV_XS';
+requires 'Text2URI';
+requires 'String::Random';
 
 test_requires 'Test::More' => '0.88';
 catalyst;
