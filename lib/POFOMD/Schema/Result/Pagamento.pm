@@ -28,7 +28,7 @@ __PACKAGE__->has_many(
     'gastos',
     'POFOMD::Schema::Result::Gasto',
     { "foreign.pagamento_id" => "self.id" },
-    { cascade_copy           => 0, cascade_delete => 0 },
+    { cascade_copy           => 0, cascade_delete => 1 },
 );
 
 1;

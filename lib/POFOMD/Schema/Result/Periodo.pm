@@ -24,7 +24,7 @@ __PACKAGE__->has_many(
     'datasets',
     'POFOMD::Schema::Result::Dataset',
     { "foreign.ano_id" => "self.id" },
-    { cascade_copy     => 0, cascade_delete => 0 },
+    { cascade_copy     => 0, cascade_delete => 1 },
 );
 
 1;
