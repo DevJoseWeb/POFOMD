@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use autodie;
 use POFOMD::Schema;
 use utf8;
 use Text::Unaccent;
@@ -67,7 +68,7 @@ $VL_ANULADO,				$VL_PAGO,			$VL_CONSIGNADO,
 
 my $csv = Text::CSV->new(
     {
-        sep_char           => ",",
+        sep_char           => ";",
         allow_loose_quotes => 1,
         binary             => 1,
         verbatim           => 0,
@@ -122,7 +123,7 @@ $rs->search( { dataset_id => $dataset->id } )->delete;
 
 
 use Encode qw/encode decode/;
-my $err;
+my $err = 0;
 
 
 while ( my $row = $csv->getline($fh) ) {
@@ -159,7 +160,7 @@ while ( my $row = $csv->getline($fh) ) {
     CODIGO_ACAO: $CODIGO_ACAO
     NOME_ACAO: $NOME_ACAO
     VALOR: $VALOR
-    " if 0;
+    " if 1;
 
 #    $VALOR = normalize_value($VALOR);
     my $str = random_regex('\d\d\d\d\d\d\d\d\d\d\d\d');
@@ -253,6 +254,7 @@ while ( my $row = $csv->getline($fh) ) {
 }
 
 print $csv->error_diag();
+print "\n\n";
 print "done #err $err total $line \n";
 close $fh;
 
