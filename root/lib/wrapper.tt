@@ -14,7 +14,7 @@
 <meta name="robots" content="index,follow" />
 
 <meta property="og:site_name" content="[% IF dataset_text %][% dataset_text %][% END %][% IF credor.nome %][% credor.nome %][% END %] - Para onde foi o meu dinheiro?"/>
-<meta property="og:image" content="http://www.paraondefoiomeudinheiro.org.br/static/images/sc-pofomd.png"/>
+<meta property="og:image" content="http://www.paraondefoiomeudinheiro.org.br/static/images/logo-pofomd-novo.png"/>
 
 [% IF credor.nome %]
 <script type="text/javascript">var switchTo5x=true;</script>
