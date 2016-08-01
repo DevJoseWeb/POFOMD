@@ -93,6 +93,15 @@
 </head>
 <body>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
@@ -161,7 +170,7 @@
 
 <![endif]-->
 <!--[if !IE]>-->
-					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.paraondefoiomeudinheiro.org.br&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" style="border:none; overflow:hidden; width:150px; height:21px;"></iframe>
+				
 <!--<![endif]-->
 					<div class="banner-orcamento"><a href="/comofunciona"><img src="/static/images/banner-orcamento.png" border="0"></a></div>
 				</div>
@@ -198,7 +207,17 @@
 	</div>
 	<div class="malha">
 		<div class="container">
-			<div class="row">
+			<div class="row">	
+					<div class="span6 text-center fb-like-box">
+					<p style="width:100%">
+					<div class="fb-page" data-href="https://www.facebook.com/paraondefoiomeudinheiro/" data-tabs="timeline" data-height="214" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+						<blockquote cite="https://www.facebook.com/paraondefoiomeudinheiro/" class="fb-xfbml-parse-ignore">
+							<a href="https://www.facebook.com/paraondefoiomeudinheiro/">Para onde foi o meu dinheiro ?</a>
+						</blockquote>
+					</div>
+					</p>
+					</div>
+
 				<div class="span6 text-center mini-menu-footer">
 					<div class="text-left-f-wrap">
 						<p>Para onde foi o meu dinheiro?</p>
@@ -207,7 +226,8 @@
 							<li><a href="https://github.com/okfn-brasil/POFOMD">Código fonte desta aplicação!</a></li>
 						</ul>
 					</div>
-				</div>
+							
+				
 				<div class="span6 text-center logo-ok-footer">
 				    <p style="text-align:left; padding-left: calc( ( 100% - 250px ) / 2 );">Coordenado por</p>
 				    <a href="" class="ok-footer-link"><img src="http://gastosabertos.org/wp-content/themes/gastos-abertos/img/okbr_logo.png"/></a>
