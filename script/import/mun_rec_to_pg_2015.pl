@@ -56,7 +56,7 @@ $CODIGO_ELEMENTO,			$NOME_ELEMENTO,				$CODIGO_SUBELEMENTO,				$NOME_SUBELEMENTO
 $CODIGO_FUNCAO,				$NOME_FUNCAO,				$CODIGO_SUBFUNCAO,				$NOME_SUBFUNCAO,
 $CODIGO_PROGRAMA,			$NOME_PROGRAMA,				$CODIGO_ACAO,					$NOME_ACAO,
 $CODIGO_FONTE,				$NOME_FONTE,				$empenho_ano,					$empenho_modalidade_nome,$empenho_modalidade_codigo,		$empenho_numero,			 $subempenho,					 $indicador_subempenho,
-$credor_codigo,				$credor_nome,				$modalidade_licitacao_codigo,	$modalidade_licitacao_nome,
+$CREDOR_CODIGO,				$CREDOR_NOME,				$modalidade_licitacao_codigo,	$modalidade_licitacao_nome,
 $VALOR,					$VALOR_LIQUIDADO,			$valor_pago,
 
 
@@ -98,8 +98,7 @@ $csv->bind_columns(
 \$CODIGO_ELEMENTO,				\$NOME_ELEMENTO,			\$CODIGO_SUBELEMENTO,			\$NOME_SUBELEMENTO,
 \$CODIGO_FUNCAO,				\$NOME_FUNCAO,				\$CODIGO_SUBFUNCAO,				\$NOME_SUBFUNCAO,
 \$CODIGO_PROGRAMA,				\$NOME_PROGRAMA,			\$CODIGO_ACAO,					\$NOME_ACAO,
-\$CODIGO_FONTE,					\$NOME_FONTE,				\$empenho_ano,					\$empenho_modalidade_nome,	\$empenho_modalidade_codigo,	\$empenho_numero,			\$subempenho,					\$indicador_subempenho,
-\$credor_codigo,				\$credor_nome,				\$modalidade_licitacao_codigo,	\$modalidade_licitacao_nome,
+\$CODIGO_FONTE,					\$NOME_FONTE,				\$empenho_ano,					\$empenho_modalidade_nome,	\$empenho_modalidade_codigo,	\$empenho_numero,			\$subempenho,					\$indicador_subempenho,	\$CREDOR_CODIGO,			\$CREDOR_NOME,				\$modalidade_licitacao_codigo,	\$modalidade_licitacao_nome,
 \$VALOR,						\$VALOR_LIQUIDADO,			\$valor_pago,
 
 
@@ -160,7 +159,7 @@ while ( my $row = $csv->getline($fh) ) {
     VALOR: $VALOR
     " if 0;
 
-#    $VALOR = normalize_value($VALOR);
+    $VALOR = normalize_value($VALOR);
     my $str = random_regex('\d\d\d\d\d\d\d\d\d\d\d\d');
     eval {
         my $obj = $rs->create(
@@ -192,8 +191,8 @@ while ( my $row = $csv->getline($fh) ) {
                     'beneficiario',
                     'Beneficiario',
                     {
-                        codigo    => 'NAO-INFORMADO',
-                        nome      => &remover_acentos('NAO-INFORMADO'),
+                        codigo    => $CREDOR_CODIGO,
+                        nome      => &remover_acentos($CREDOR_NOME),
                         documento => '0',
                         uri       => $t->translate( &remover_acentos('NAO-INFORMADO') )
                     }
@@ -221,7 +220,7 @@ while ( my $row = $csv->getline($fh) ) {
                     {
                         numero_processo            => "NAO-INFORMADO-$CODIGO_ACAO-$str",
                         numero_nota_empenho        => 'NAO-INFORMADO',
-                        tipo_licitacao             => 'NAO-INFORMADO',
+                        tipo_licitacao             => $modalidade_licitacao_nome,
                         valor_empenhado            => 0,
                         valor_liquidado            => $VALOR,
                         valor_pago_anos_anteriores => 0,
@@ -232,8 +231,8 @@ while ( my $row = $csv->getline($fh) ) {
                     'recurso',
                     'Recurso',
                     {
-                        codigo => 'NAO-INFORMADO',
-                        nome   => 'NAO-INFORMADO'
+                        codigo => $CODIGO_FONTE,
+                        nome   => $NOME_FONTE
                     }
                 ),
                 valor => $VALOR
