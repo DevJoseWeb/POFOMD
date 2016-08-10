@@ -194,8 +194,13 @@ while ( my $row = $csv->getline($fh) ) {
                         codigo    => $CREDOR_CODIGO,
                         nome      => &remover_acentos($CREDOR_NOME),
                         documento => '0',
-                        uri       => $t->translate( &remover_acentos('NAO-INFORMADO') )
-                    }
+                       	   if ($CREDOR_NOME == 'CREDOR NÃ INFORMADO'){
+			   	last;
+			   }
+			   else {
+				uri       => $t->translate( &remover_acentos('NAO-INFORMADO') )
+                    	   }
+		    }
                 ),
 
                 &cache_or_create(
