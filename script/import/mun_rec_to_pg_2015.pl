@@ -194,12 +194,7 @@ while ( my $row = $csv->getline($fh) ) {
                         codigo    => $CREDOR_CODIGO,
                         nome      => &remover_acentos($CREDOR_NOME),
                         documento => '0',
-                       	   if ($CREDOR_NOME == 'CREDOR NÃ INFORMADO'){
-			   	last;
-			   }
-			   else {
-				uri       => $t->translate( &remover_acentos('NAO-INFORMADO') )
-                    	   }
+			uri       => "NAO-INFORMADO-$CODIGO_ACAO-$str"
 		    }
                 ),
 
@@ -215,7 +210,7 @@ while ( my $row = $csv->getline($fh) ) {
                 &cache_or_create(
                     'gestora',
                     'Gestora',
-                    {
+                 {
                         codigo => $CODIGO_UNIDADE_GESTORA,
                         nome   => $NOME_UNIDADE_GESTORA
                     }
