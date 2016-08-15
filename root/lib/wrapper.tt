@@ -231,7 +231,7 @@
 				
 				<div class="span6 text-center logo-ok-footer">
 				    <p style="text-align:left; padding-left: calc( ( 100% - 250px ) / 2 );">Coordenado por</p>
-				    <a href="" class="ok-footer-link"><img src="http://gastosabertos.org/wp-content/themes/gastos-abertos/img/okbr_logo.png"/></a>
+				    <a href="http://br.okfn.org/" class="ok-footer-link"><img src="http://gastosabertos.org/wp-content/themes/gastos-abertos/img/okbr_logo.png"/></a>
 			    </div>
 				<!--<div class="span6 text-right">
 					<p>
